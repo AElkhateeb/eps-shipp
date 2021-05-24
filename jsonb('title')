@@ -1,0 +1,25 @@
+Generating App\Models\$table; finished
+Appending $table; model to ModelFactory finished
+Generating App\Http\Controllers\Admin\$table;Controller finished
+Updating sidebar
+Generating App\Http\Requests\Admin\$table;\Index$table; finished
+Generating App\Http\Requests\Admin\$table;\Store$table; finished
+Generating App\Http\Requests\Admin\$table;\Update$table; finished
+Generating App\Http\Requests\Admin\$table;\Destroy$table; finished
+Generating App\Http\Requests\Admin\$table;\BulkDestroy$table; finished
+Appending routes finished
+Generating C:\wamp64\www\eps-shipp\resources\views/admin/$table;/index.blade.php finished
+Generating C:\wamp64\www\eps-shipp\resources\js/admin/$table;/Listing.js finished
+Appending Listing to C:\wamp64\www\eps-shipp\resources\js/admin/$table;/index.js finished
+Appending $table;/index.js to C:\wamp64\www\eps-shipp\resources\js/admin/index.js finished
+Generating C:\wamp64\www\eps-shipp\resources\views/admin/$table;/components/form-elements.blade.php finished
+Generating C:\wamp64\www\eps-shipp\resources\views/admin/$table;/create.blade.php finished
+Generating C:\wamp64\www\eps-shipp\resources\views/admin/$table;/edit.blade.php finished
+Generating C:\wamp64\www\eps-shipp\resources\js/admin/$table;/Form.js finished
+Appending Form to C:\wamp64\www\eps-shipp\resources\js/admin/$table;/index.js finished
+Appending translations finished
+Generating permissions for $table; finished
+
+ Do you want to attach generated permissions to the default role now? (yes/no) [yes]:
+ > 
+Generating whole admin finished

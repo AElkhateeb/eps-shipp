@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="col-sm-auto form-group ">
                                         <select class="form-control" v-model="pagination.state.per_page">
-                                            
+
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="100">100</option>
@@ -55,7 +55,6 @@
                                         <th is='sortable' :column="'is_published'">{{ trans('admin.slider.columns.is_published') }}</th>
                                         <th is='sortable' :column="'link1'">{{ trans('admin.slider.columns.link1') }}</th>
                                         <th is='sortable' :column="'link2'">{{ trans('admin.slider.columns.link2') }}</th>
-
                                         <th></th>
                                     </tr>
                                     <tr v-show="(clickedBulkItemsCount > 0) || isClickedAll">
@@ -96,7 +95,7 @@
 
                                         <td>@{{ item.link1 }}</td>
                                         <td>@{{ item.link2 }}</td>
-                                        
+                                        <td v-html="item.as_img"> @{{ item.as_img }}  </td>
                                         <td>
                                             <div class="row no-gutters">
                                                 <div class="col-auto">

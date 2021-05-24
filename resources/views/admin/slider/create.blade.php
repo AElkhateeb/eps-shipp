@@ -22,6 +22,10 @@
                 </div>
 
                 <div class="card-body">
+                    @include('brackets/admin-ui::admin.includes.media-uploader', [
+                     'mediaCollection' => app(App\Models\Slider::class)->getMediaCollection('slider'),
+                     'label' => 'SLIDE'
+                    ])
                     @include('admin.slider.components.form-elements')
 
                 <div class="card-footer">

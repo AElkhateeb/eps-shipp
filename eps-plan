@@ -1,0 +1,39 @@
+frontend
+    pages
+        home           html  blade  control
+            slider
+            identity
+            tracking
+            service
+            Pros
+            calculetr
+            testimonials
+        about
+            who we are identity Profile
+            why us  Pros
+        service
+            all
+            details
+        jobs
+        contact
+        pricing
+        cart
+        shipment
+        tracking
+    clint
+        orders
+backend
+    admin               table  crud   img
+        slider           ***    ***   ***
+        identity         ***    ***   ***
+        Pros             ***    ***   ===
+        Services         ***    ***   ***
+        jobs             ***    ***   ===
+        aplications      ***    ***   ===
+        testimonials     ***    ***
+        social           ***    ***   ===
+        contact
+        branshes
+        packages         ***    ***   ===
+        page             ***    ***
+

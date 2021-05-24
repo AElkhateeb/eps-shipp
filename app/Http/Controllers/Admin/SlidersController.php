@@ -80,7 +80,7 @@ class SlidersController extends Controller
         $sanitized = $request->getSanitized();
 
         // Store the Slider
-        $slider = Slider::create($sanitized,$request->validated());
+        $slider = Slider::create($sanitized);
 
         if ($request->ajax()) {
             return ['redirect' => url('admin/sliders'), 'message' => trans('brackets/admin-ui::admin.operation.succeeded')];
