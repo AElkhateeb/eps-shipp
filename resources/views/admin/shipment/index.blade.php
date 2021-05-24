@@ -15,6 +15,7 @@
                 <div class="card">
                     <div class="card-header">
                         <i class="fa fa-align-justify"></i> {{ trans('admin.shipment.actions.index') }}
+                        <a class="btn btn-primary btn-sm pull-right m-b-0 ml-2" href="{{ url('admin/shipments/export') }}" role="button"><i class="fa fa-file-excel-o"></i>&nbsp; {{ trans('admin.shipment.actions.export') }}</a>
                         <a class="btn btn-primary btn-spinner btn-sm pull-right m-b-0" href="{{ url('admin/shipments/create') }}" role="button"><i class="fa fa-plus"></i>&nbsp; {{ trans('admin.shipment.actions.create') }}</a>
                     </div>
                     <div class="card-body" v-cloak>

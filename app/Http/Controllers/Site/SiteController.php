@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Site;
 
-use App\Models\About;
-use App\Models\Contact;
+use App\Models\Identity;
+//use App\Models\Contact;
 use App\Models\Counter;
 use App\Models\Service;
-use App\Models\Category;
+//use App\Models\Category;
 use App\Models\Social;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use App\Models\Sliders;
+use App\Models\Slider;
 
 
 class SiteController extends Controller
@@ -22,19 +22,19 @@ class SiteController extends Controller
     public function Index()
     {
         //sliders
-        $sliders = Sliders::limit(5)->get(); // return collection
+        $sliders = Slider::limit(5)->get(); // return collection
         $sliders->makeHidden(['resource_url','media']);
        // return $sliders;
         //about About
-        $about = About::limit(5)->get(); // return collection
+        $about = Identity::limit(5)->get(); // return collection
        $about->makeHidden(['resource_url']);
        //service Service
         $service = Service::limit(8)->get(); // return collection
         $service->makeHidden(['resource_url']);
 
        //Categories
-        $categories = Category::limit(8)->get(); // return collection
-        $categories->makeHidden(['resource_url']);
+      //  $categories = Category::limit(8)->get(); // return collection
+       // $categories->makeHidden(['resource_url']);
        //products
 
 
@@ -43,7 +43,7 @@ class SiteController extends Controller
            'sliders'=>$sliders,
            'about'=>$about,
            'service'=>$service,
-           'categories'=>$categories,
+           //'categories'=>$categories,
 
        ];
       return view('front\index',compact('data'));

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\WaysExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Way\BulkDestroyWay;
 use App\Http\Requests\Admin\Way\DestroyWay;
@@ -18,6 +19,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Illuminate\View\View;
 
 class WaysController extends Controller
@@ -184,5 +187,15 @@ class WaysController extends Controller
         });
 
         return response(['message' => trans('brackets/admin-ui::admin.operation.succeeded')]);
+    }
+
+    /**
+     * Export entities
+     *
+     * @return BinaryFileResponse|null
+     */
+    public function export(): ?BinaryFileResponse
+    {
+        return Excel::download(app(WaysExport::class), 'ways.xlsx');
     }
 }

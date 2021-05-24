@@ -153,3 +153,91 @@ $factory->define(App\Models\Page::class, static function (Faker\Generator $faker
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Shipment::class, static function (Faker\Generator $faker) {
+    return [
+        'weight' => $faker->randomFloat,
+        'pkg_num' => $faker->randomNumber(5),
+        'status' => $faker->sentence,
+        'published_at' => $faker->dateTime,
+        'end_at' => $faker->dateTime,
+        'prod_kind' => $faker->sentence,
+        'prod_price' => $faker->sentence,
+        'way_id' => $faker->randomNumber(5),
+        'from_user_id' => $faker->randomNumber(5),
+        'to_user_id' => $faker->randomNumber(5),
+        'pay_way' => $faker->randomNumber(5),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Place::class, static function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->firstName,
+        'enabled' => $faker->boolean(),
+        'parent_id' => $faker->randomNumber(5),
+        'bransh_id' => $faker->randomNumber(5),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Way::class, static function (Faker\Generator $faker) {
+    return [
+        'price' => $faker->randomFloat,
+        'time' => $faker->randomFloat,
+        'enabled' => $faker->boolean(),
+        'from_id' => $faker->randomNumber(5),
+        'to_id' => $faker->randomNumber(5),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\PayWay::class, static function (Faker\Generator $faker) {
+    return [
+        'fees' => $faker->randomFloat,
+        'sale' => $faker->randomFloat,
+        'enabled' => $faker->boolean(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        'name' => ['en' => $faker->firstName],
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Withdrawal::class, static function (Faker\Generator $faker) {
+    return [
+        'price' => $faker->randomFloat,
+        'in_out' => $faker->boolean(),
+        'enabled' => $faker->boolean(),
+        'from_id' => $faker->randomNumber(5),
+        'to_id' => $faker->randomNumber(5),
+        'way_id' => $faker->randomNumber(5),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        'status' => ['en' => $faker->sentence],
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Wallet::class, static function (Faker\Generator $faker) {
+    return [
+        'money' => $faker->randomFloat,
+        'belongs_to' => $faker->sentence,
+        'belongs_to_id' => $faker->randomNumber(5),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

@@ -22,6 +22,7 @@ class CreateWithdrawalsTable extends Migration
             $table->integer('from_id');
             $table->integer('to_id');
             $table->integer('way_id');
+            $table->foreign('way_id')->references('id')->on('pay_ways')->onUpdate('cascade');
             $table->foreign('from_id')->references('id')->on('wallets')->onUpdate('cascade');
             $table->foreign('to_id')->references('id')->on('wallets')->onUpdate('cascade');
             $table->timestamps();

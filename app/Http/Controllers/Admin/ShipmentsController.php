@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\ShipmentsExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Shipment\BulkDestroyShipment;
 use App\Http\Requests\Admin\Shipment\DestroyShipment;
@@ -18,6 +19,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Illuminate\View\View;
 
 class ShipmentsController extends Controller
@@ -185,5 +188,15 @@ class ShipmentsController extends Controller
         });
 
         return response(['message' => trans('brackets/admin-ui::admin.operation.succeeded')]);
+    }
+
+    /**
+     * Export entities
+     *
+     * @return BinaryFileResponse|null
+     */
+    public function export(): ?BinaryFileResponse
+    {
+        return Excel::download(app(ShipmentsExport::class), 'shipments.xlsx');
     }
 }

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['namespace'=>'Site'],function () {
+Route::group(['namespace'=>'App\Http\Controllers\Site'],function () {
     // Route::get('/', function () {echo "home";});
     Route::get('/', 'SiteController@index');
     Route::get('home','SiteController@index');
@@ -208,6 +208,145 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/bulk-destroy',                                'PagesController@bulkDestroy')->name('bulk-destroy');
             Route::post('/{page}',                                      'PagesController@update')->name('update');
             Route::delete('/{page}',                                    'PagesController@destroy')->name('destroy');
+        });
+    });
+});
+
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('shipments')->name('shipments/')->group(static function() {
+            Route::get('/',                                             'ShipmentsController@index')->name('index');
+            Route::get('/create',                                       'ShipmentsController@create')->name('create');
+            Route::post('/',                                            'ShipmentsController@store')->name('store');
+            Route::get('/{shipment}/edit',                              'ShipmentsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'ShipmentsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{shipment}',                                  'ShipmentsController@update')->name('update');
+            Route::delete('/{shipment}',                                'ShipmentsController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('places')->name('places/')->group(static function() {
+            Route::get('/',                                             'PlacesController@index')->name('index');
+            Route::get('/create',                                       'PlacesController@create')->name('create');
+            Route::post('/',                                            'PlacesController@store')->name('store');
+            Route::get('/{place}/edit',                                 'PlacesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'PlacesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{place}',                                     'PlacesController@update')->name('update');
+            Route::delete('/{place}',                                   'PlacesController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('ways')->name('ways/')->group(static function() {
+            Route::get('/',                                             'WaysController@index')->name('index');
+            Route::get('/create',                                       'WaysController@create')->name('create');
+            Route::post('/',                                            'WaysController@store')->name('store');
+            Route::get('/{way}/edit',                                   'WaysController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WaysController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{way}',                                       'WaysController@update')->name('update');
+            Route::delete('/{way}',                                     'WaysController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('pay-ways')->name('pay-ways/')->group(static function() {
+            Route::get('/',                                             'PayWaysController@index')->name('index');
+            Route::get('/create',                                       'PayWaysController@create')->name('create');
+            Route::post('/',                                            'PayWaysController@store')->name('store');
+            Route::get('/{payWay}/edit',                                'PayWaysController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'PayWaysController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{payWay}',                                    'PayWaysController@update')->name('update');
+            Route::delete('/{payWay}',                                  'PayWaysController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('withdrawals')->name('withdrawals/')->group(static function() {
+            Route::get('/',                                             'WithdrawalsController@index')->name('index');
+            Route::get('/create',                                       'WithdrawalsController@create')->name('create');
+            Route::post('/',                                            'WithdrawalsController@store')->name('store');
+            Route::get('/{withdrawal}/edit',                            'WithdrawalsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WithdrawalsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{withdrawal}',                                'WithdrawalsController@update')->name('update');
+            Route::delete('/{withdrawal}',                              'WithdrawalsController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('wallets')->name('wallets/')->group(static function() {
+            Route::get('/',                                             'WalletsController@index')->name('index');
+            Route::get('/create',                                       'WalletsController@create')->name('create');
+            Route::post('/',                                            'WalletsController@store')->name('store');
+            Route::get('/{wallet}/edit',                                'WalletsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WalletsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{wallet}',                                    'WalletsController@update')->name('update');
+            Route::delete('/{wallet}',                                  'WalletsController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('withdrawals')->name('withdrawals/')->group(static function() {
+            Route::get('/',                                             'WithdrawalsController@index')->name('index');
+            Route::get('/create',                                       'WithdrawalsController@create')->name('create');
+            Route::post('/',                                            'WithdrawalsController@store')->name('store');
+            Route::get('/{withdrawal}/edit',                            'WithdrawalsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WithdrawalsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{withdrawal}',                                'WithdrawalsController@update')->name('update');
+            Route::delete('/{withdrawal}',                              'WithdrawalsController@destroy')->name('destroy');
+            Route::get('/export',                                       'WithdrawalsController@export')->name('export');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('shipments')->name('shipments/')->group(static function() {
+            Route::get('/',                                             'ShipmentsController@index')->name('index');
+            Route::get('/create',                                       'ShipmentsController@create')->name('create');
+            Route::post('/',                                            'ShipmentsController@store')->name('store');
+            Route::get('/{shipment}/edit',                              'ShipmentsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'ShipmentsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{shipment}',                                  'ShipmentsController@update')->name('update');
+            Route::delete('/{shipment}',                                'ShipmentsController@destroy')->name('destroy');
+            Route::get('/export',                                       'ShipmentsController@export')->name('export');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('ways')->name('ways/')->group(static function() {
+            Route::get('/',                                             'WaysController@index')->name('index');
+            Route::get('/create',                                       'WaysController@create')->name('create');
+            Route::post('/',                                            'WaysController@store')->name('store');
+            Route::get('/{way}/edit',                                   'WaysController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WaysController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{way}',                                       'WaysController@update')->name('update');
+            Route::delete('/{way}',                                     'WaysController@destroy')->name('destroy');
+            Route::get('/export',                                       'WaysController@export')->name('export');
         });
     });
 });

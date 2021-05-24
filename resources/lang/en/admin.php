@@ -244,5 +244,202 @@ return [
         ],
     ],
 
+    'shipment' => [
+        'title' => 'Shipments',
+
+        'actions' => [
+            'index' => 'Shipments',
+            'create' => 'New Shipment',
+            'edit' => 'Edit :name',
+            'will_be_published' => 'Shipment will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'weight' => 'Weight',
+            'pkg_num' => 'Pkg num',
+            'status' => 'Status',
+            'published_at' => 'Published at',
+            'end_at' => 'End at',
+            'prod_kind' => 'Prod kind',
+            'prod_price' => 'Prod price',
+            'way_id' => 'Way',
+            'from_user_id' => 'From user',
+            'to_user_id' => 'To user',
+            'pay_way' => 'Pay way',
+            
+        ],
+    ],
+
+    'place' => [
+        'title' => 'Places',
+
+        'actions' => [
+            'index' => 'Places',
+            'create' => 'New Place',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'enabled' => 'Enabled',
+            'parent_id' => 'Parent',
+            'bransh_id' => 'Bransh',
+            
+        ],
+    ],
+
+    'way' => [
+        'title' => 'Ways',
+
+        'actions' => [
+            'index' => 'Ways',
+            'create' => 'New Way',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'price' => 'Price',
+            'time' => 'Time',
+            'enabled' => 'Enabled',
+            'from_id' => 'From',
+            'to_id' => 'To',
+            
+        ],
+    ],
+
+    'pay-way' => [
+        'title' => 'Pay Ways',
+
+        'actions' => [
+            'index' => 'Pay Ways',
+            'create' => 'New Pay Way',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'fees' => 'Fees',
+            'sale' => 'Sale',
+            'enabled' => 'Enabled',
+            
+        ],
+    ],
+
+    'withdrawal' => [
+        'title' => 'Withdrawals',
+
+        'actions' => [
+            'index' => 'Withdrawals',
+            'create' => 'New Withdrawal',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'price' => 'Price',
+            'status' => 'Status',
+            'in_out' => 'In out',
+            'enabled' => 'Enabled',
+            'from_id' => 'From',
+            'to_id' => 'To',
+            'way_id' => 'Way',
+            
+        ],
+    ],
+
+    'wallet' => [
+        'title' => 'Wallets',
+
+        'actions' => [
+            'index' => 'Wallets',
+            'create' => 'New Wallet',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'money' => 'Money',
+            'belongs_to' => 'Belongs to',
+            'belongs_to_id' => 'Belongs to',
+            
+        ],
+    ],
+
+    'withdrawal' => [
+        'title' => 'Withdrawals',
+
+        'actions' => [
+            'index' => 'Withdrawals',
+            'create' => 'New Withdrawal',
+            'edit' => 'Edit :name',
+            'export' => 'Export',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'price' => 'Price',
+            'status' => 'Status',
+            'in_out' => 'In out',
+            'enabled' => 'Enabled',
+            'from_id' => 'From',
+            'to_id' => 'To',
+            'way_id' => 'Way',
+            
+        ],
+    ],
+
+    'shipment' => [
+        'title' => 'Shipments',
+
+        'actions' => [
+            'index' => 'Shipments',
+            'create' => 'New Shipment',
+            'edit' => 'Edit :name',
+            'export' => 'Export',
+            'will_be_published' => 'Shipment will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'weight' => 'Weight',
+            'pkg_num' => 'Pkg num',
+            'status' => 'Status',
+            'published_at' => 'Published at',
+            'end_at' => 'End at',
+            'prod_kind' => 'Prod kind',
+            'prod_price' => 'Prod price',
+            'way_id' => 'Way',
+            'from_user_id' => 'From user',
+            'to_user_id' => 'To user',
+            'pay_way' => 'Pay way',
+            
+        ],
+    ],
+
+    'way' => [
+        'title' => 'Ways',
+
+        'actions' => [
+            'index' => 'Ways',
+            'create' => 'New Way',
+            'edit' => 'Edit :name',
+            'export' => 'Export',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'price' => 'Price',
+            'time' => 'Time',
+            'enabled' => 'Enabled',
+            'from_id' => 'From',
+            'to_id' => 'To',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];
