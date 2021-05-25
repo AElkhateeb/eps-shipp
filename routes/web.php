@@ -15,23 +15,29 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-
-Route::group(['namespace'=>'App\Http\Controllers\Site'],function () {
-    // Route::get('/', function () {echo "home";});
+Route::group(['middleware' => 'setLocale:en','namespace'=>'App\Http\Controllers\Site'],function () {
+    Route::get('/', 'SiteController@index');
+});
+Route::group(['prefix' => 'ar','middleware' => 'setLocale:ar','namespace'=>'App\Http\Controllers\Site'],function () {
     Route::get('/', 'SiteController@index');
     Route::get('home','SiteController@index');
     Route::get('about','SiteController@about');
-    Route::get('categories','SiteController@categories');
-    Route::get('categories/{id}','SiteController@category');
-    Route::get('categories/{id}/products','SiteController@categoryProducts');
-    Route::get('categories/{id}/posts','SiteController@categoryPosts');
-    Route::get('products','SiteController@products');
-    Route::get('posts','SiteController@posts');
-    Route::get('products/{id}','SiteController@product');
-    Route::get('posts/{id}','SiteController@post');
+    Route::get('services','SiteController@services');
+    Route::get('service/{id}','SiteController@service');
+    Route::get('career','SiteController@contact');
+    Route::get('pricing','SiteController@contact');
     Route::get('contact','SiteController@contact');
 });
-
+Route::group(['prefix' => 'en','middleware' => 'setLocale:en','namespace'=>'App\Http\Controllers\Site'],function () {
+    Route::get('/', 'SiteController@index');
+    Route::get('home','SiteController@index');
+    Route::get('about','SiteController@about');
+    Route::get('services','SiteController@services');
+    Route::get('service/{id}','SiteController@service');
+    Route::get('career','SiteController@contact');
+    Route::get('pricing','SiteController@contact');
+    Route::get('contact','SiteController@contact');
+});
 
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {

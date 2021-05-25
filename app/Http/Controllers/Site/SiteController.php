@@ -11,6 +11,9 @@ use App\Models\Social;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Models\Slider;
+use Illuminate\Support\Facades\App;
+
+
 
 
 class SiteController extends Controller
@@ -22,6 +25,7 @@ class SiteController extends Controller
     public function Index()
     {
         //sliders
+        //$locale = App::currentLocale();
         $sliders = Slider::limit(5)->get(); // return collection
         $sliders->makeHidden(['resource_url','media']);
        // return $sliders;
@@ -65,7 +69,7 @@ class SiteController extends Controller
         ];
         return view('front\about',compact('data'));
     }
-    public function Categories()
+    public function Services()
     {
 
         $counter = Counter::limit(4)->get(); // return collection
@@ -79,7 +83,7 @@ class SiteController extends Controller
         return view('front\categories',compact('data'));
 
     }
-    public function Category($id)
+    public function Service($id)
     {
 
         $products = Category::with('products')->find($id)->limit(8)->get(); // return collection

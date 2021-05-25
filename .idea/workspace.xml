@@ -2,50 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b8e1f5d-667b-4a99-afc5-baf2681722fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/SetLocale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/front.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ShipmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ShipmentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/WaysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/WaysController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/WithdrawalsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/WithdrawalsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_24_072208_create_shipments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_24_072208_create_shipments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_24_075727_create_withdrawals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_24_075727_create_withdrawals_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/admin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eps-shipp/webpack.mix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/admin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/shipment/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shipment/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/way/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/way/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/withdrawal/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/withdrawal/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -217,7 +182,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -229,10 +194,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\eps-shipp\resources\lang\ar" />
+      <recent name="C:\wamp64\www\eps-shipp\resources\lang\en" />
       <recent name="D:\wamp64\www\eps-shipp\resources\views\layouts" />
       <recent name="C:\wamp64\www\eps-shipp\public\front" />
       <recent name="C:\wamp64\www\eps-shipp" />
-      <recent name="D:\wamp64\www\eps-shipp\resources\lang" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -268,6 +234,7 @@
       <workItem from="1621765210760" duration="5512000" />
       <workItem from="1621834843579" duration="8480000" />
       <workItem from="1621864259735" duration="6765000" />
+      <workItem from="1621918929354" duration="14129000" />
     </task>
     <servers />
   </component>
@@ -332,9 +299,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1621843226238" />
-    <state x="346" y="49" width="670" height="58" key="search.everywhere.popup" timestamp="1621761790031">
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup" timestamp="1621932562280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="670" height="58" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1621761790031" />
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1621932562280" />
   </component>
 </project>

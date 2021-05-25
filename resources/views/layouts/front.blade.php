@@ -1,5 +1,9 @@
+<?php
+use Illuminate\Support\Facades\App;
+use App\Models\Service;
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ App::currentLocale() }}">
 <head>
     <meta charset="utf-8">
     <title>GoCargo - Freight, Logistics & Transportation Website Template</title>
@@ -11,7 +15,7 @@
     <link href="{{URL::asset('front/css/main.css')}}" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body <?= (App::currentLocale()=='en')? 'dir="ltr"': 'dir="rtl" '?> >
 <div id="preloader"></div>
 <div id="wrapper">
 
@@ -26,7 +30,7 @@
                     <!-- logo begin -->
                     <div id="logo">
                         <div class="inner">
-                            <a href="index.html">
+                            <a href="{{ url(App::currentLocale().'/') }}" >
                                 <img src="img/logo.png" alt="" class="logo-1">
                                 <img src="img/logo.png" alt="" class="logo-2">
                             </a>
@@ -41,77 +45,37 @@
 
                     <!-- mainmenu begin -->
                     <nav id="mainmenu-container">
-                        <ul id="mainmenu">
-                            <li><a href="index.html">Home</a>
+                        <ul id="mainmenu" class="text-right">
+                            <li><a href="{{ url(App::currentLocale().'/') }}">{{__('front.home')}}</a></li>
+                            <li><a href="{{ url(App::currentLocale().'/services') }}">{{__('front.services')}}</a>
                                 <ul>
-                                    <li><a href="index.html">Homepage 1</a></li>
-                                    <li><a href="index-2.html">Homepage 2</a></li>
-                                    <li><a href="index-3.html">Homepage 3</a></li>
+                                    <li><a href="{{ url(App::currentLocale().'/services') }}">{{__('front.services')}}</a></li>
+                                    <?php
+                                    $services = Service::limit(6)->get(); // return collection
+                                    $services->makeHidden(['resource_url']);
+                                    //$services->title['en']
+                                    ?>
+                                    @foreach($services as $service)
+                                        <li><a href="{{ url(App::currentLocale().'/service/'.$service->id) }}">{{ $service->title  }}</a></li>
+                                    @endforeach
+
+
                                 </ul>
                             </li>
-                            <li><a href="services.html">Services</a>
-                                <ul>
-                                    <li><a href="services.html">All Services 1</a></li>
-                                    <li><a href="services-2.html">All Services 2</a></li>
-                                    <li><a href="#">Details + Sidebar</a>
-                                        <ul>
-                                            <li><a href="service-details-1.html">Service Details 1</a></li>
-                                            <li><a href="service-details-2.html">Service Details 2</a></li>
-                                            <li><a href="service-details-3.html">Service Details 3</a></li>
-                                            <li><a href="service-details-4.html">Service Details 4</a></li>
-                                            <li><a href="service-details-5.html">Service Details 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Details Full Page</a>
-                                        <ul>
-                                            <li><a href="service-details-alt-2.html">Service Details 1</a></li>
-                                            <li><a href="service-details-alt-3.html">Service Details 2</a></li>
-                                            <li><a href="service-details-alt-4.html">Service Details 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About Us</a>
-                                <ul>
-                                    <li><a href="#">About</a>
-                                        <ul>
-                                            <li><a href="about.html">About Us 1</a></li>
-                                            <li><a href="about-2.html">About Us 2</a></li>
-                                            <li><a href="about-3.html">About Us 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Clients</a>
-                                        <ul>
-                                            <li><a href="clients.html">Clients 1</a></li>
-                                            <li><a href="clients-2.html">Clients 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="company.html">Company</a></li>
-                                    <li><a href="people.html">People</a></li>
-                                    <li><a href="history.html">History</a></li>
-                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                    <li><a href="careers.html">Careers</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">News</a>
-                                <ul>
-                                    <li><a href="news.html">News Layout 1</a></li>
-                                    <li><a href="news-2.html">News Layout 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ url(App::currentLocale().'/about') }}">{{__('front.about')}}</a></li>
+                            <li><a href="{{ url(App::currentLocale().'/career') }}">{{__('front.career')}}</a></li>
+                            <li><a href="{{ url(App::currentLocale().'/pricing') }}">{{__('front.pricing')}}</a></li>
+                            <li><a href="{{ url(App::currentLocale().'/contact') }}">{{__('front.contact')}}</a></li>
                         </ul>
                     </nav>
                     <!-- mainmenu close -->
 
                     <!-- search -->
                     <div class="search text-right">
-                        <input type="text" name="search" id="search" placeholder="search">
-                        <button type="submit" class="btn-search-icon">
+                        <a class="btn-default" href="{{ url((App::currentLocale()=='en')? 'ar': 'en').'/' }}"> <?= (App::currentLocale()=='en')? 'العربية': 'English'?></a>
+                        <!--button type="submit" class="btn-search-icon">
                             <i class="fa fa-search"></i>
-                        </button>
+                        </button-->
                     </div>
                     <!-- social icons close -->
 
