@@ -12,7 +12,7 @@ use App\Models\Service;
     <meta name="author" content="">
 
     <!-- LOAD CSS FILES -->
-    <link href="{{URL::asset('front/css/main.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{URL::asset('front/css/main_'.App::currentLocale().'.css')}}" rel="stylesheet" type="text/css">
 </head>
 
 <body <?= (App::currentLocale()=='en')? 'dir="ltr"': 'dir="rtl" '?> >
@@ -24,15 +24,15 @@ use App\Models\Service;
         <div class="container">
             <span id="menu-btn"></span>
 
-            <div class="row">
+            <div class="row" id="arabic">
                 <div class="col-md-3">
 
                     <!-- logo begin -->
                     <div id="logo">
                         <div class="inner">
                             <a href="{{ url(App::currentLocale().'/') }}" >
-                                <img src="img/logo.png" alt="" class="logo-1">
-                                <img src="img/logo.png" alt="" class="logo-2">
+                                <img src="{{URL::asset('front/img/logo.png')}}" alt="" class="logo-1">
+                                <img src="{{URL::asset('front/img/logo.png')}}" alt="" class="logo-2">
                             </a>
 
                         </div>
@@ -72,7 +72,7 @@ use App\Models\Service;
 
                     <!-- search -->
                     <div class="search text-right">
-                        <a class="btn-default" href="{{ url((App::currentLocale()=='en')? 'ar': 'en').'/' }}"> <?= (App::currentLocale()=='en')? 'العربية': 'English'?></a>
+                        <a class="btn-default" href="{{ url((App::currentLocale()=='en')? 'ar/': 'en/')}}"> <?= (App::currentLocale()=='en')? 'العربية': 'English'?></a>
                         <!--button type="submit" class="btn-search-icon">
                             <i class="fa fa-search"></i>
                         </button-->

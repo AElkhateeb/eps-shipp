@@ -119,9 +119,9 @@ header .animated {
 header .search {
 	margin-top: 25px;
 	display: inline-block;
-	float: right;
+	float: left;
 	position:absolute;
-	right:0;
+	left:0;
 }
 header .search input[type=text] {
 	border-radius: 60px;
@@ -199,11 +199,21 @@ MAINMENU
 .menu-right {
 	float: right;
 }
+#arabic {
+    display: flex;
+    justify-content: flex-end;
+}
+.arabic.arabic {
+    display: flex;
+    justify-content: flex-end;
+}
 #mainmenu {
 	color: #fd8c40;
 	font-size: 13px;
 	display: inline-block;
 	text-align: left;
+    display: flex;
+    justify-content: flex-end;
 }
 #mainmenu.s1{
 	text-transform:uppercase;
@@ -1395,9 +1405,9 @@ blockquote span {
 	padding-left: 0;
 }
 .box-with-icon-left .text {
-	margin-left: 56px;
+	margin-right: 56px;
 	padding: 0 30px 0 30px;
-	border-left: solid 1px #fd8c40;
+	border-right: solid 1px #fd8c40;
 }
 .box-icon-small i {
 	position: absolute !important;
@@ -1458,7 +1468,7 @@ div:hover>.btn-arrow.hover-light span.line {
 	width: 75%;
 }
 .cta-form input[type=submit] {
-	border-radius: 0 10px 10px 0;
+	border-radius: 10px 0px 0px 10px;
 	background: #fd8c40;
 	width: 25%;
 }
@@ -2432,7 +2442,7 @@ css attributes
 	position: absolute;
 }
 .info-box .info-box_text {
-	padding-left: 60px;
+	padding-right: 60px;
 }
 .info-box .info-box_title {
 	font-weight: 700;
@@ -4587,7 +4597,6 @@ a, a:hover, .feature-box, .custom-col-3 i, .custom-col-3 i:hover, .custom-carous
 	#mainmenu>li li:first-child {
 		border-top: solid 1px #222;
 	}
-
 	#mainmenu li ul {
 		border-top: solid 1px #222;
 		border: none;

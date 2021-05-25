@@ -64,14 +64,14 @@
 
 
     <!-- section begin -->
-    <section id="section-side-2" class="side-bg">
-        <div class="col-md-6 col-md-offset-6 pull-right image-container">
+    <section id="section-side-2" class="side-bg <?= (App::currentLocale()=='en')? '': 'arabic'?>">
+        <div class="col-md-6 col-md-offset-6  <?= (App::currentLocale()=='en')? 'pull-right': 'pull-left '?> image-container">
             <div class="background-image"></div>
         </div>
 
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 <?= (App::currentLocale()=='en')? 'pull-left': 'pull-right" '?>">
 
                     <h2>Who We Are</h2>
                     <p class="lead">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
@@ -97,7 +97,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <div class="cta-form wow fadeIn" data-wow-delay="0s" data-wow-duration="1s">
+                    <div  <?= (App::currentLocale()=='en')? '': 'id="arabic" '?> class="cta-form wow fadeIn" data-wow-delay="0s" data-wow-duration="1s">
                         <input type="text" name="track" value="" placeholder="Insert tracking number here...">
                         <input type="submit" id="track-it" name="submit" value="TRACK IT">
                         <div class="clearfix"></div>
@@ -332,9 +332,9 @@
                     <h2>They Says</h2>
                     <div class="divider-deco"><span></span></div>
 
-                    <div id="testi-carousel-2" class="testi-slider wow fadeIn" data-wow-delay="0s" data-wow-duration="1s">
+                    <div dir="ltr" id="testi-carousel-2" class="testi-slider wow fadeIn" data-wow-delay="0s" data-wow-duration="1s">
                         <div class="item">
-                            <blockquote>
+                            <blockquote >
                                 Gocargo people professional and courteous attitude, expert knowledge and patience handling our specific issues are very important to our customer
 
                             </blockquote>
@@ -385,7 +385,7 @@
 
     <section id="section-contact-form">
         <div class="container">
-            <div class="row">
+            <div class="row  <?= (App::currentLocale()=='en')? '': 'arabic" '?>">
                 <div class="col-md-4">
                     <div class="light-text">
                         <div class="bg-2 padding30">

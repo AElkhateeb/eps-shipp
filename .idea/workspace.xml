@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b8e1f5d-667b-4a99-afc5-baf2681722fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/SetLocale.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/front.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/front.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/main_ar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/main_en.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/css/style_ar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/css/color/yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/color/yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/front/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,11 +192,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\eps-shipp\public\front\css" />
       <recent name="C:\wamp64\www\eps-shipp\resources\lang\ar" />
       <recent name="C:\wamp64\www\eps-shipp\resources\lang\en" />
       <recent name="D:\wamp64\www\eps-shipp\resources\views\layouts" />
       <recent name="C:\wamp64\www\eps-shipp\public\front" />
-      <recent name="C:\wamp64\www\eps-shipp" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -235,6 +233,7 @@
       <workItem from="1621834843579" duration="8480000" />
       <workItem from="1621864259735" duration="6765000" />
       <workItem from="1621918929354" duration="14129000" />
+      <workItem from="1621961672925" duration="619000" />
     </task>
     <servers />
   </component>
